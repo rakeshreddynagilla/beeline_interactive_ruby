@@ -8,7 +8,7 @@ class Transaction < ApplicationRecord
 
   scope :deposits,  -> { where(category: 'deposit') }
   scope :refunds,  -> { where(category: 'refund') }
-  scope :withdrawls,  -> { where(category: 'withdrawl') }
+  scope :withdraws,  -> { where(category: 'withdraw') }
 
   #If too many currencies, add a loop to generate scopes?
   scope :usd, -> {where(amount_currency: 'USD')}

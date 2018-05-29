@@ -22,7 +22,7 @@ class FinancialSummary
   end
 
   def transactions(category)
-    @transactions ||= @user.transactions.send(@period)
+    @transactions = @user.transactions.send(@period)
                                         .send(@currency)
                                         .send(category.pluralize)
   end

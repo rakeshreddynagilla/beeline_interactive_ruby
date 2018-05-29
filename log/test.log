@@ -1542,3 +1542,151 @@
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
   [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
   [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "arnita_denesik@example.com"], ["created_at", "2018-05-29 18:05:08.589601"], ["updated_at", "2018-05-29 18:05:08.589601"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-05-29 18:05:08.591678"], ["updated_at", "2018-05-29 18:05:08.591678"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-05-29 18:05:08.591678"], ["updated_at", "2018-05-29 18:05:08.591678"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-27 18:05:08.645585"], ["updated_at", "2018-05-27 18:05:08.645585"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-28 18:05:08.669708') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-28 18:05:08.669708') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "leonardo_adams@example.net"], ["created_at", "2018-05-29 18:05:08.679653"], ["updated_at", "2018-05-29 18:05:08.679653"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-05-24 18:05:08.681399"], ["updated_at", "2018-05-24 18:05:08.681399"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-05-24 18:05:08.681399"], ["updated_at", "2018-05-24 18:05:08.681399"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-21 18:05:08.690993"], ["updated_at", "2018-05-21 18:05:08.690993"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:05:08.696005') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:05:08.696005') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "roseanna@example.net"], ["created_at", "2018-05-29 18:05:08.724496"], ["updated_at", "2018-05-29 18:05:08.724496"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-04-29 18:05:08.725845"], ["updated_at", "2018-04-29 18:05:08.725845"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-04-29 18:05:08.725845"], ["updated_at", "2018-04-29 18:05:08.725845"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-21 18:05:08.730989"], ["updated_at", "2018-05-21 18:05:08.730989"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "waldo.green@example.net"], ["created_at", "2018-05-29 18:05:29.718880"], ["updated_at", "2018-05-29 18:05:29.718880"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-05-29 18:05:29.720781"], ["updated_at", "2018-05-29 18:05:29.720781"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-05-29 18:05:29.720781"], ["updated_at", "2018-05-29 18:05:29.720781"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-27 18:05:29.762548"], ["updated_at", "2018-05-27 18:05:29.762548"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-28 18:05:29.774841') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-28 18:05:29.777052') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (3.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "oren@example.com"], ["created_at", "2018-05-29 18:05:29.785385"], ["updated_at", "2018-05-29 18:05:29.785385"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-05-24 18:05:29.786719"], ["updated_at", "2018-05-24 18:05:29.786719"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-05-24 18:05:29.786719"], ["updated_at", "2018-05-24 18:05:29.786719"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-21 18:05:29.793360"], ["updated_at", "2018-05-21 18:05:29.793360"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:05:29.798451') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:05:29.801170') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "withdraw"]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:05:29.802417') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "jarod.hickle@example.org"], ["created_at", "2018-05-29 18:05:29.805660"], ["updated_at", "2018-05-29 18:05:29.805660"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-04-29 18:05:29.806983"], ["updated_at", "2018-04-29 18:05:29.806983"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-04-29 18:05:29.806983"], ["updated_at", "2018-04-29 18:05:29.806983"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-21 18:05:29.813282"], ["updated_at", "2018-05-21 18:05:29.813282"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "katia@example.org"], ["created_at", "2018-05-29 18:06:36.478321"], ["updated_at", "2018-05-29 18:06:36.478321"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-04-29 18:06:36.481883"], ["updated_at", "2018-04-29 18:06:36.481883"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-04-29 18:06:36.481883"], ["updated_at", "2018-04-29 18:06:36.481883"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-21 18:06:36.534854"], ["updated_at", "2018-05-21 18:06:36.534854"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (4.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "ayesha_okon@example.net"], ["created_at", "2018-05-29 18:06:36.560505"], ["updated_at", "2018-05-29 18:06:36.560505"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-05-29 18:06:36.562466"], ["updated_at", "2018-05-29 18:06:36.562466"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-05-29 18:06:36.562466"], ["updated_at", "2018-05-29 18:06:36.562466"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-27 18:06:36.568074"], ["updated_at", "2018-05-27 18:06:36.568074"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-28 18:06:36.573084') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-28 18:06:36.574376') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "michal@example.com"], ["created_at", "2018-05-29 18:06:36.578664"], ["updated_at", "2018-05-29 18:06:36.578664"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 212], ["category", "deposit"], ["created_at", "2018-05-24 18:06:36.580183"], ["updated_at", "2018-05-24 18:06:36.580183"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 1000], ["category", "deposit"], ["created_at", "2018-05-24 18:06:36.580183"], ["updated_at", "2018-05-24 18:06:36.580183"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount_cents", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["amount_cents", 100], ["category", "deposit"], ["created_at", "2018-05-21 18:06:36.587750"], ["updated_at", "2018-05-21 18:06:36.587750"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:06:36.590988') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = ? AND (created_at >= '2018-05-22 18:06:36.592436') AND "transactions"."amount_currency" = ? AND "transactions"."category" = ?[0m  [["user_id", 1], ["amount_currency", "USD"], ["category", "deposit"]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
